@@ -33,7 +33,7 @@ VERSION = "1.9.3"
 # Get Env
 PREFIX = os.getenv("DGSM_PREFIX") or "!"
 ROLEID = os.getenv("DGSM_ROLEID")
-CUSTOM_IMAGE_URL = os.getenv("DGSM_CUSTOM_IMAGE_URL") or "https://github.com/DiscordGSM/DiscordGSM/blob/master/images/discordgsm.png?raw=true"
+CUSTOM_IMAGE_URL = os.getenv("DGSM_CUSTOM_IMAGE_URL") or "https://raw.githubusercontent.com/alix1383/google/main/1.gif"
 REFRESH_RATE = int(os.getenv("DGSM_REFRESH_RATE")) or 5
 PRESENCE_TYPE = int(os.getenv("DGSM_PRESENCE_TYPE")) or 3
 PRESENCE_RATE = int(os.getenv("DGSM_PRESENCE_RATE")) or 5
@@ -368,15 +368,15 @@ client = commands.Bot(command_prefix=PREFIX)
 @commands.check_any(commands.has_role(ROLEID), commands.is_owner())
 async def _dgsm(ctx):
     title = f'Command: {PREFIX}dgsm'
-    description = f'Thanks for using Discord Game Server Monitor ([DiscordGSM](https://github.com/DiscordGSM/DiscordGSM))\n'
+    description = f'Thanks for using Discord Game Server Monitor ([DiscordGSM](https://github.com/alix1383))\n'
     description += f'\nUseful commands:\n{PREFIX}servers - Display the server list'
     description += f'\n{PREFIX}serversrefresh - Refresh the server list'
     description += f'\n{PREFIX}getserversjson - get servers.json file'
     description += f'\n{PREFIX}setserversjson - set servers.json file'
     color = discord.Color.from_rgb(114, 137, 218) # discord theme color
     embed = discord.Embed(title=title, description=description, color=color)
-    embed.add_field(name="Support server", value="https://discord.gg/Cg4Au9T", inline=True)
-    embed.add_field(name="Github", value="https://github.com/DiscordGSM/DiscordGSM", inline=True)
+    embed.add_field(name="Support server", value="https://discord.gg/HWKjfgY3Kz", inline=True)
+    embed.add_field(name="Github", value="https://github.com/alix1383", inline=True)
     await ctx.send(embed=embed)
 
 # command: serversrefresh
